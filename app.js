@@ -1,7 +1,7 @@
 require('dotenv').config();
 const NOTION_KEY = process.env.NOTION_KEY;
 const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
-const SERIES_DATABASE_ID = process.env.NOTION_DATABASE_ID;
+const SERIES_DATABASE_ID = process.env.SERIES_DATABASE_ID;
 
 const axios = require('axios');
 const { Client } = require('@notionhq/client');
