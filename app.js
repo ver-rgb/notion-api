@@ -203,7 +203,6 @@ async function getBook(bookData) {
         const genre = result(el)
           .find('.Button__labelItem')
           .text();
-        //console.log(genre);
         genresArray.push(genre);
       });
       
