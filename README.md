@@ -3,8 +3,8 @@ Integrates Google Books API and Goodreads web scraping to input book data into a
 
 ## How It Works
 1. Searches through your Books database to filter for pages with an ISBN but no Names (aka the book title)
-2. Using the Google API, it extracts the title, first author (in title case), publication year, and ISBN
-3. Scrapes web data from Goodreads and extracts the average rating, number of ratings, series name, number in series, image link for cover, and the first four most tagged genres
+2. Uses the Google API to extract the title, first author (in title case), publication year, and ISBN
+3. Scrapes web data from Goodreads to extract the average rating, number of ratings, series name, number in series, image link for cover, and the first four most tagged genres
 4. Checks if a page for the book exists in the Series database. If one does, it updates the page. If not, it creates a new page.
 5. Creates the Amazon and Goodreads link with the ISBN info
 6. Inputs all this info into the Book and Series databases
@@ -33,6 +33,7 @@ Click it and find **Internal Integration Secret**. That will be your NOTION_KEY
 
 ## Get NOTION_DATABASE_ID & SERIES_DATABASE_ID
 Duplicate this template for the Books & Series databases [template](https://gentle-catmint-460.notion.site/Book-Tracker-Template-223502ca107a80c19eeaffd38cb0c861?pvs=143)
+* It will already have two example ISBNS (9780006498858, 9780063021426), so you can check if it runs properly
 
 The database ID from "Book List" will be NOTION_DATABASE_ID
 The database ID from "Series List" will be SERIES_DATABASE_ID
@@ -40,6 +41,14 @@ The database ID from "Series List" will be SERIES_DATABASE_ID
 To retrieve the IDs, use this [tutorial from Notion](https://developers.notion.com/reference/retrieve-a-database)
 
 ## Clone & Edit GitHub Repo
+Clone this GitHub Repo by copying this exact code to your terminal
+```
+git clone https://github.com/ver-rgb/notion-api.git
+cd notion-api
+```
+
+
+
 
 
 
