@@ -57,7 +57,7 @@ git clone https://github.com/ver-rgb/notion-api.git
 cd notion-api
 npm install js-yaml
 ```
-Now open the config.yaml file, and replace the placeholder IDs with the ones explained in the above steps.
+Now open the config.yaml file, and replace the placeholder IDs (NOTION_KEY, NOTION_DATABASE_ID, SERIES_DATABASE_ID) with the ones explained in the above steps.
 
 ## Run Code
 After the config.yaml file is updated, run this code
