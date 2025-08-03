@@ -14,7 +14,7 @@ Organized in this order:
 1. Create & Retrieve NOTION_KEY
 2. Get NOTION_DATABASE_ID & SERIES_DATABASE_ID
 3. Clone & Edit GitHub Repo
-4. Run code
+4. Run Code
 
 Skip to whichever section you need
    
@@ -45,8 +45,32 @@ Clone this GitHub Repo by copying this exact code to your terminal
 ```
 git clone https://github.com/ver-rgb/notion-api.git
 cd notion-api
+npm install js-yaml
 ```
-Now open the .env file, and replace the placeholder IDs with the ones explained in the above steps.
+Now open the config.yaml file, and replace the placeholder IDs with the ones explained in the above steps.
+
+## Run Code
+After the config.yaml file is updated, run this code
+
+```
+npm run dev
+```
+
+This will run through your Books database once and update your books.
+
+If you need to run it again another time, just run this code in your terminal:
+```
+cd notion-api
+npm install js-yaml
+```
+
+Good luck! If there are any issues, leave a comment.
+
+**Note:** This is my first ever full project and first time creating a GitHub repo. So I apologize in advance for any errors, and I will do my best to fix them as they go.
+
+
+
+
 
 
 
