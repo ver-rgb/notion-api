@@ -46,6 +46,10 @@ Clone this GitHub Repo by copying this exact code to your terminal
 git clone https://github.com/ver-rgb/notion-api.git
 cd notion-api
 ```
+Now open the .env file, and replace the placeholder IDs with the ones explained in the above steps.
+
+
+
 
 
 
