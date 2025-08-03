@@ -2,7 +2,7 @@
 Integrates Google Books API and Goodreads web scraping to input book data into a Notion database.
 
 ## How It Works
-1. Searches through your Books database to filter for pages with an ISBN but no Names (aka the book title)
+1. Searches through your Books database to filter for pages with an ISBN but blank Names (aka the book title)
 2. Uses the Google API to extract the title, first author (in title case), publication year, and ISBN
 3. Scrapes web data from Goodreads to extract the average rating, number of ratings, series name, number in series, image link for cover, and the first four most tagged genres
 4. Checks if a page for the book exists in the Series database. If one does, it updates the page. If not, it creates a new page.
