@@ -32,7 +32,7 @@ Now, you should have a new Integration key.
 Click it and find **Internal Integration Secret**. That will be your NOTION_KEY
 
 ## Get NOTION_DATABASE_ID & SERIES_DATABASE_ID
-Duplicate this template for the Books & Series databases [template](https://gentle-catmint-460.notion.site/Book-Tracker-Template-223502ca107a80c19eeaffd38cb0c861?pvs=143)
+Duplicate this [template](https://gentle-catmint-460.notion.site/Book-Tracker-Template-223502ca107a80c19eeaffd38cb0c861?pvs=143) for the Books & Series databases 
 * It will already have two example ISBNS (9780006498858, 9780063021426), so you can check if it runs properly
 
 **IMPORTANT!!** After duplicating the template:
