@@ -35,6 +35,13 @@ Click it and find **Internal Integration Secret**. That will be your NOTION_KEY
 Duplicate this template for the Books & Series databases [template](https://gentle-catmint-460.notion.site/Book-Tracker-Template-223502ca107a80c19eeaffd38cb0c861?pvs=143)
 * It will already have two example ISBNS (9780006498858, 9780063021426), so you can check if it runs properly
 
+**IMPORTANT!!** After duplicating the template:
+1. Click the three dots at the top right of the page
+2. Hover over **Connections**
+3. Select the Notion API connection you just created
+
+Repeat this if you ever copy the database to another page!
+
 The database ID from "Book List" will be NOTION_DATABASE_ID
 The database ID from "Series List" will be SERIES_DATABASE_ID
 
@@ -61,7 +68,7 @@ This will run through your Books database once and update your books.
 If you need to run it again another time, just run this code in your terminal:
 ```
 cd notion-api
-npm install js-yaml
+npm run dev
 ```
 
 Good luck! If there are any issues, leave a comment.
