@@ -1,14 +1,17 @@
-require('dotenv').config();
-const NOTION_KEY = process.env.NOTION_KEY;
-const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
-const SERIES_DATABASE_ID = process.env.SERIES_DATABASE_ID;
-
 const axios = require('axios');
 const { Client } = require('@notionhq/client');
 const cheerio = require('cheerio');
-const notion = new Client({auth: NOTION_KEY});
 const fs = require("fs");
+const yaml = require('js-yaml');
 
+const configFile = fs.readFileSync('./config.yaml', 'utf8');
+const config = yaml.load(configFile);
+
+const NOTION_KEY = config.notion.key;
+const NOTION_DATABASE_ID = config.notion.books_database_id;
+const SERIES_DATABASE_ID = config.notion.series_database_id;
+
+const notion = new Client({auth: NOTION_KEY});
 const bookData = [];
 const bookArray = [];
 
