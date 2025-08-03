@@ -42,7 +42,10 @@ Duplicate this [template](https://gentle-catmint-460.notion.site/Book-Tracker-Te
 
 Repeat this if you ever copy the database to another page!
 
+
+
 The database ID from "Book List" will be NOTION_DATABASE_ID
+
 The database ID from "Series List" will be SERIES_DATABASE_ID
 
 To retrieve the IDs, use this [tutorial from Notion](https://developers.notion.com/reference/retrieve-a-database)
