@@ -4,10 +4,13 @@ Integrates Google Books API and Goodreads web scraping to input book data into a
 ## How It Works
 1. Searches through your Books database to filter for pages with an ISBN but blank Names (aka the book title)
 2. Uses the Google API to extract the title, first author (in title case), publication year, and ISBN
-3. Scrapes web data from Goodreads to extract the average rating, number of ratings, series name, number in series, image link for cover, and the first four most tagged genres
-4. Checks if a page for the book exists in the Series database. If one does, it updates the page. If not, it creates a new page.
-5. Creates the Amazon and Goodreads link with the ISBN info
-6. Inputs all this info into the Book and Series databases
+3. Attempts to get information from Goodreads if Google API doesn't have the ISBN
+4. Scrapes web data from Goodreads to extract the average rating, number of ratings, series name, number in series, image link for cover, and the first four most tagged genres
+5. Genres are linked to a different database with count per genre for tracking purposes.
+6. Checks if Kindle Unlimited by searching through the first 50 tags of Goodreads to see if any are "kindle-unlimited" or "ku" 
+7. Checks if a page for the book exists in the Series database. If one does, it updates the page. If not, it creates a new page.
+8. Creates the Amazon and Goodreads link with the ISBN info
+9. Inputs all this info into the Book and Series databases
 
 # Installation
 Organized in this order:
@@ -33,7 +36,7 @@ Click it and find **Internal Integration Secret**. That will be your NOTION_KEY
 
 ## Get NOTION_DATABASE_ID & SERIES_DATABASE_ID
 Duplicate this [template](https://gentle-catmint-460.notion.site/Book-Tracker-Template-223502ca107a80c19eeaffd38cb0c861?pvs=143) for the Books & Series databases 
-* It will already have two example ISBNS (9780006498858, 9780063021426), so you can check if it runs properly
+* It will already have six example ISBNS, so you can check if it runs properly
 
 **IMPORTANT!!** After duplicating the template:
 1. Click the three dots at the top right of the page
@@ -45,8 +48,8 @@ Repeat this if you ever copy the database to another page!
 
 
 The database ID from "Book List" will be NOTION_DATABASE_ID
-
 The database ID from "Series List" will be SERIES_DATABASE_ID
+The database ID from "Genres List" will be SERIES_DATABASE_ID
 
 To retrieve the IDs, use this [tutorial from Notion](https://developers.notion.com/reference/retrieve-a-database)
 
@@ -55,7 +58,6 @@ Clone this GitHub Repo by copying this exact code to your terminal
 ```
 git clone https://github.com/ver-rgb/notion-api.git
 cd notion-api
-npm install js-yaml
 ```
 Now open the config.yaml file, and replace the placeholder IDs (NOTION_KEY, NOTION_DATABASE_ID, SERIES_DATABASE_ID) with the ones explained in the above steps.
 
