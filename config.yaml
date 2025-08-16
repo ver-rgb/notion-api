@@ -2,3 +2,4 @@ notion:
   key: your-notion-key
   books_database_id: your-books-database-id
   series_database_id: your-series-database-id
+  genres_database_id: your-genres-database-id
